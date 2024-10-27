@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>calculator</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            text-align: center;
+            background-color:#005969;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+        }
+        input[type=textfield] {
+            width: 300px;
+            height: 60px;
+            font-size: 30px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        input[type=button], input[type=reset] {
+            width: 60px;
+            height: 60px;
+            font-size: 50px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 5px 0px 0px #777;
+            transition: 0.1s ease;
+        }
+        input[type=button]:active, input[type=reset]:active {
+            background-color: rgb(0, 255, 85);
+            transform: translateY(4px);
+            box-shadow: 0px 2px 0px 0px #777;
+        }
+        input[type=button][value="+"], 
+        input[type=button][value="-"], 
+        input[type=button][value="*"], 
+        input[type=button][value="/"] {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <form name="calculator">
+        <input type="textfield" name="ans" value="">
+        <br>
+        <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+        <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+        <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+        <input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+        <br>
+        <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+        <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+        <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+        <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+        <br>
+        <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+        <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+        <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+        <input type="button" value="*" onClick="document.calculator.ans.value+='*'">
+        <br>
+        <input type="reset" value="C">
+        <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+        <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+        <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+    </form>
+</body>
+</html>
